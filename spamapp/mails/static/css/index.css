@@ -1,0 +1,17 @@
+h1{
+    size: 40px;
+    border-bottom: 2px solid red;
+}
+
+
+.notifyTitle {
+    float: left;
+    text-align: left;
+    white-space: normal;
+}
+/*
+#mailsborder {
+    border-style:solid;
+   border-width: thin;
+}
+*/
