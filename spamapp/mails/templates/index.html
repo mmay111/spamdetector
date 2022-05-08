@@ -2,7 +2,7 @@
 {% load static %}
 
 
-{% block css_files %} 
+{% block css_files %}
     <link rel="stylesheet" href="{% static '/css/index.css' %}">
 {% endblock %}
 
@@ -21,33 +21,25 @@
 
 
 <div class="container container-fluid" id="app" style="margin-left:0px;padding-left:0px; padding-right:0px;">
-    <h2 class="page-title" style="margin-left:15px;">{{xx}}</h2>
-   <div class="row">
-       <div class="col-md-2">
+<div class="row" style="margin-top:100px;">
+  <div class="col-md-2">
 
-       </div>
-       <div class="col-md-8" style="padding-left:0px; padding-right:0px;">
-        <div class="col-md-12">
-            <div>
-                <input type="text" maxlength="150" style="width:stretch" class=" form-control" v-model="filter" placeholder="Duyurular arasında ara...">
-            </div>
-        </div>
-        <br />
-        <div class="col-md-12">
-            {% for mail in mails %}
-                
-                <div id="mailsborder">
-                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#xy{{mail.id}}" style="width: 100%; padding:6px; background-color: #26344B;"><p class="notifyTitle">{{mail.title }}</p><p>{{mail.is_active}}</p></button>
-                    <div id="xy{{mail.id}}" class="collapse" data-parent="#app">
-                        <p>
-                            {{mail.content}}
-                        </p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-   </div>
+  </div>
+  <div class="col-md-8">
+    <form method="post">
+      
+      {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1">input</label>
+    Name:<input type="input" name = "name" class="form-control" id="exinput" aria-describedby="emailHelp" placeholder="Enter input">
+
+  </div>
+
+  <button  type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
+</div>
+<!--<h1>{{name}}</h1>-->
 </div>
 
 

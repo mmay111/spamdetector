@@ -28,6 +28,26 @@
 
     {% include 'partials/_navbar.html' %}
     
+    {% if messages %}
+                
+    {% for message in messages %}
+    {% if message.tags == "success" %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    var m = "{{message}}";
+    swal("Tebrikler !",m,"success")
+    </script>
+    {% else %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    var m = "{{message}}";
+    swal("Hata !",m,"error")
+    </script>
+
+    {% endif %}
+    {% endfor %}
+
+    {% endif %}
 
     {% block content %}
 
