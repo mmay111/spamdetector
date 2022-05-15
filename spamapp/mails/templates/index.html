@@ -19,7 +19,6 @@
 
 {% block content %}
 
-
 <div class="container container-fluid" id="app" style="margin-left:0px;padding-left:0px; padding-right:0px;">
 <div class="row" style="margin-top:100px;">
   <div class="col-md-2">
@@ -29,6 +28,7 @@
     <form method="post">
       
       {% csrf_token %}
+
   <div class="form-group">
     <label for="exampleInputEmail1">input</label>
     Name:<input type="input" name = "name" class="form-control" id="exinput" aria-describedby="emailHelp" placeholder="Enter input">
